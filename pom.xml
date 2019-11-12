@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.javatechie</groupId>
-	<artifactId>spring-data-solar</artifactId>
+	<artifactId>spring-data-solr</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-data-solar</name>
-	<description>spring data solar example</description>
+	<name>spring-data-solr</name>
+	<description>spring data solr example</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
