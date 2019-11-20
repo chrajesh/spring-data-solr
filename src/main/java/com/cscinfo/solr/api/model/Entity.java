@@ -14,21 +14,37 @@ import java.util.List;
 @Builder
 @SolrDocument(collection = "entity_collection")
 public class Entity {
-	@Id
-	private String id;
-	@Indexed
-	private String name;
-	@Indexed(name = "cat")
-	private List<String> category;
-	@Indexed(name = "store")
-	private Point location;
-	@Indexed
-	private String description;
-	@Indexed
-	private boolean inStock;
-	@Indexed
-	private Integer popularity;
-	@Score
-	private Float score;
+    @Id
+    private String id;
+    @Indexed
+    private String name;
+    @Indexed
+    private String description;
+    @Indexed
+    private String entityType;
+    @Indexed
+    private String jurisdiction;
+    @Indexed
+    private String fiscalYearEnd;
+    @Indexed
+    private boolean international;
+    @Indexed
+    private String cscStatus;
+    @Indexed
+    private String businessPurpose;
+    @Indexed
+    private String legalStructure;
+    @Indexed
+    private String annualMeetingDate;
+    @Indexed
+    private String entityStatus;
+    @Indexed
+    private String cscIndicator;
+    @Indexed
+    private Integer entityPartyId;
+    @Indexed
+    private Integer orgPartyId;
+
+
 }
 

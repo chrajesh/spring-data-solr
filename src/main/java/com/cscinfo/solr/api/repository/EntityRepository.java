@@ -7,9 +7,11 @@ import org.springframework.data.solr.core.query.result.HighlightPage;
 import org.springframework.data.solr.repository.Boost;
 import org.springframework.data.solr.repository.Highlight;
 import org.springframework.data.solr.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface EntityRepository extends EntityRepositoryCustom, CrudRepository<Entity, String> {
 
     /**
@@ -24,4 +26,18 @@ public interface EntityRepository extends EntityRepositoryCustom, CrudRepository
      */
     @Query
     List<Entity> findTop10ByNameOrDescription(@Boost(2) String name, String description);
+
+
+    @Query
+    List<Entity> findByJurisdiction(@Boost(2) String jurisdiction);
+
+    @Query
+    List<Entity> findByOrgPartyId(@Boost(2) Integer orgPartyId);
+
+    @Query
+    List<Entity> findByEntityStatus(@Boost(2) String entityStatus);
+
+    @Query
+    List<Entity> findByOrgPartyIdAndEntityStatus(@Boost(2) Integer orgPartyId, String entityStatus);
+
 }
